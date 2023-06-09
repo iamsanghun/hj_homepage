@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+</head>
+<body>
+  <header>
+    <h1>My Website</h1>
+    <a href="#">About Me</a>
+  </header>
+  <main>
+    <div id="portfolio">
+      <div class="image">
+        <img src="images/portfolio1.jpg" alt="Portfolio 1">
+      </div>
+      <div class="image">
+        <img src="images/portfolio2.jpg" alt="Portfolio 2">
+      </div>
+      <div class="image">
+        <img src="images/portfolio3.jpg" alt="Portfolio 3">
+      </div>
+      <div class="image">
+        <img src="images/portfolio4.jpg" alt="Portfolio 4">
+      </div>
+    </div>
+    <script>
+      var images = document.querySelectorAll(".image");
+      var index = 0;
+      setInterval(function() {
+        images[index].style.display = "none";
+        index = (index + 1) % images.length;
+        images[index].style.display = "block";
+      }, 3000);
+    </script>
+  </main>
+  <footer>
+    <p>Copyright &copy; 2023 My Website</p>
+  </footer>
+</body>
+</html>
